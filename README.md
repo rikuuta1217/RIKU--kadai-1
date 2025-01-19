@@ -78,11 +78,24 @@
 ```
 < $ php artisan db:seed >
 ```
+
 ## 7.アプリケーションキーの作成
 
 ```
 < $ php artisan key:generate >
 ```
+
+## 権限エラー
+
+"The stream or file could not be opend" エラーが発生した場合
+srcディレクトリにあるstorageディレクトリ以下の権限を変更
+
+```
+< $ chmod -R 777 storage >
+``` 
+
+
+
 
 
 
