@@ -40,7 +40,7 @@
 ・phpコンテナにログイン
 
 ```
-< $ ddocker-compose exec php bash >
+< $ docker-compose exec php bash >
 
 < $ docker exec -it "phpのdockerID" bash >
 ```
