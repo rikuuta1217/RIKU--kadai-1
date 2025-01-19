@@ -135,6 +135,11 @@
                 <div class="form__input--select">
                   <select name="content">
                     <option value="選択してください" >選択してください</option>
+                    <option value="1">商品のお届けについて</option>
+                    <option value="2">商品の交換について</option>
+                    <option value="3">商品トラベル</option>
+                    <option value="4">ショップへのお問い合わせ</option>
+                    <option value="5">その他</option>
                   </select>
                 </div>
            </div>

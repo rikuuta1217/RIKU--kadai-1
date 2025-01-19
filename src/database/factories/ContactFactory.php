@@ -17,6 +17,8 @@ class ContactFactory extends Factory
         return [
                 'first_name' => $this->faker->firstName(),
                 'last_name' => $this->faker->lastName(),
+                'gender' => $this->faker->randomElement(['男性','女性','その他']),
+                'category_id' => $this->faker->numberBetween(1,5),
                 'email' => $this->faker->safeEmail(),
                 'tel' => $this->faker->phoneNumber(11),
                 'address' => $this->faker->city(),
