@@ -93,6 +93,10 @@ srcディレクトリにあるstorageディレクトリ以下の権限を変更
 ```
 < $ chmod -R 777 storage >
 ``` 
+## ER図テーブル
+
+![ER図](ER.drawio.png)
+
 
 
 
