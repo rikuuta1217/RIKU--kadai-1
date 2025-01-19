@@ -41,8 +41,6 @@
 
 ```
 < $ docker-compose exec php bash >
-
-< $ docker exec -it "phpのdockerID" bash >
 ```
 
 ・パッケージのインストール
