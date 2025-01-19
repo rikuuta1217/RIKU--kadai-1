@@ -13,7 +13,9 @@
 
 4..envファイルの作成、設定
 
-6.テーブル再作成
+5.テーブルの作成
+
+6.ダミーデータの作成
 
 7.Model概要、アプリケーションの起動
 
@@ -65,15 +67,18 @@
 < DB_USERNAME=laravel_user
 < DB_PASSWORD=laravel_pass
 
-## 6.コントローラー再作成
+## 5.テーブルの作成
 
 ```
-< $ php artisan migrate:refresh >
+< $ php artisan migrate >
 ```
 
-## 7.アプリケーションの起動
+## 6.ダミーデータの作成
 
-phpコンテナでアプリケーション起動コマンドを入力
+```
+< $ php artisan db:seed >
+```
+## 7.アプリケーションキーの作成
 
 ```
 < $ php artisan key:generate >
