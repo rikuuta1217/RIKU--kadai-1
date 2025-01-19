@@ -21,7 +21,7 @@
 
 ## 1.リポジトリの設定
 
-・自身のディレクトリに以下のURL (https://github.com/rikuuta1217/-RIKU--kadai-1.git) から、laravel-docker-template.gitをクローン
+・自身のディレクトリに以下のURL (https://github.com/rikuuta1217/RIKU--kadai-1.git) から、laravel-docker-template.gitをクローン
 
 ```
 < $ git clone git@github.com:rikuuta1217/-RIKU--kadai-1.git >
