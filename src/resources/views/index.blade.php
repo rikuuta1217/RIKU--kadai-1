@@ -22,7 +22,7 @@
       <div class="contact-form__heading">
         <h2>Contact</h2>
       </div>
-      <form class="form" action="/contacts/confirm" method="post">
+      <form class="form" action="/contacts/confirm" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form__group">
           <div class="form__group-title">
@@ -133,16 +133,31 @@
                 <span class="form__label--item">お問い合わせの種類</span>
             <div class="form__group-content">
                 <div class="form__input--select">
-                  <select name="content">
-                    <option value="選択してください" >選択してください</option>
-                    <option value="1">商品のお届けについて</option>
-                    <option value="2">商品の交換について</option>
-                    <option value="3">商品トラベル</option>
-                    <option value="4">ショップへのお問い合わせ</option>
-                    <option value="5">その他</option>
+                  <select name="category_id" >
+                    @foreach ($categorys as $category)
+                    <option value="{{ $category->id }}">{{ $category->content }} </option>
+                    @endforeach
                   </select>
                 </div>
+                <div class="form__error">
+                @error('category_id')
+                {{ $message }}
+                @enderror
+                </div>
            </div>
+        </div>
+         <div class="form__group">
+          <div class="form__group-title">
+            <span class="form__label--item">お問い合わせの選択＜複数選択可＞</span>
+          <div class="form__group-content">
+            <div class="form__input--checkbox">
+            
+              @foreach ($selects as $select)
+              <input type="checkbox" name="select_id[]" value="{{ $select->id }}"> {{ $select->select }}
+              @endforeach
+            </div>
+          </div>
+         </div>
         </div>
         <div class="form__group">
           <div class="form__group-title">
@@ -158,6 +173,21 @@
             {{ $message }}
             @enderror
            </div>
+          </div>
+        </div>
+        <div class="form__group">
+          <div class="form__group-title">
+            <span class="form__label--item">画像ファイル選択</span>
+          </div>
+          <div class="form__group-content">
+            <div class="form__input--image">
+              <input type="file" name="image" value="{{ old('image') }}">
+            </div>
+            <div class="form__error">
+              @error('image')
+              {{ $message }}
+              @enderror
+            </div>
           </div>
         </div>
         <div class="form__button">

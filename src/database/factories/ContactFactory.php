@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Contact;
 use Illuminate\Database\Eloquent\Factories\Factory;
-
+ 
 class ContactFactory extends Factory
 {
     /**
@@ -24,6 +24,7 @@ class ContactFactory extends Factory
                 'address' => $this->faker->city(),
                 'building' => $this->faker->streetAddress(),
                 'detail' => $this->faker->realText(),
+                'image' => 'contact_image/sample.png',
         ];
     }
 }

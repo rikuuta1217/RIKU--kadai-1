@@ -31,7 +31,8 @@ class ContactRequest extends FormRequest
                 'tel' => ['required', 'numeric'],
                 'address' => ['required', 'max:255'],
                 'building' => ['max:255'],
-                'content' => ['required', 'max:255'],
+                'category_id' => ['required', 'max:255'],
+                'image' => ['required'],
         ];
     }
 
@@ -45,7 +46,8 @@ class ContactRequest extends FormRequest
             'email.email' => 'メールアドレスはメール形式で選択してください',
             'tel.required' => '電話番号を入力してください',
             'address.required' => '住所を入力してください',
-            'content.required' => 'お問い合わせの種類を選択してください',
+            'category_id.required' => 'お問い合わせの種類を選択してください',
+            'image.required' => '写真を選択してください',
         ];
     }
 }

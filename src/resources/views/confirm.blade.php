@@ -66,13 +66,31 @@
             <tr class="confirm-table__row">
               <th class="confirm-table__header">お問い合わせの種類</th>
               <td class="confirm-table__text">
-                <input type="text" name="content" value="{{ $contact['content'] }}" readonly/>
+                <input type="text" name="content" value="{{ $category['content'] }}" readonly/>
+                <input type="hidden" name="category_id" value="{{ $category['id'] }}" readonly/>
+              </td>
+            </tr>
+            <tr class="confirm-table__row">
+              <th class="confirm-table__header">お問い合わせの選択＜複数選択可＞</th>
+              <td class="confirm-table__text">
+              
+                @foreach ($selects as $select)
+              <input type="checkbox" name="select_id[]" value="{{ $select->id }}"> {{ $select->select }}
+              @endforeach
+           
               </td>
             </tr>
             <tr class="confirm-table__row">
               <th class="confirm-table__header">お問い合わせ内容</th>
               <td class="confirm-table__text">
                 <input type="text" name="detail" value="{{ $contact['detail'] }}" readonly/>
+              </td>
+            </tr>
+            <tr class="confirms-table__row">
+              <th class="confirm-table__header">画像ファイル内容</th>
+              <td class="confirm-table__text">
+                <img src="{{ '/storage/' . $contact['image'] }}">
+                <input type="hidden" name="image" value="{{ $contact['image'] }}">
               </td>
             </tr>
           </table>
